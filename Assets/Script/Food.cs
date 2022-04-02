@@ -23,7 +23,18 @@ public class Food : MonoBehaviour
         this.transform.position += Vector3.forward * Time.deltaTime * speed;
     }
 
-    
+    private void OnCollisionEnter(Collision collision)
+    {
+        
+        if (collision.gameObject.CompareTag("Animal"))
+        {
+            GameObject animal = collision.gameObject;
+            GameObject gameManagerGO =  GameObject.FindGameObjectWithTag("Game Manager");
+            GameManager gameManager = gameManagerGO.GetComponent<GameManager>();
+            gameManager.animalHit(animal);
+            Destroy(gameObject);
+        }
+    }
 
-    
+
 }
