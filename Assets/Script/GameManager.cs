@@ -21,11 +21,10 @@ public class GameManager : MonoBehaviour
         
     }
 
-    public void animalHit(GameObject animalGO)
+    public void animalHit(int animalHitPoints, int foodHitPoints)
     {
         MainCanvas mainCanvas = mainCanvasGO.GetComponent<MainCanvas>();
-        Animal animal = animalGO.GetComponent<Animal>();
-        score += animal.HitPoints;
+        score += animalHitPoints * foodHitPoints;
         mainCanvas.UpdateScore(score);
     }
 }

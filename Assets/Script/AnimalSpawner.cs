@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AnimalSpawner : MonoBehaviour
 {
-    [SerializeField] GameObject animal;
+    [SerializeField] GameObject[] animal;
     [SerializeField] float delay = 1;
     float timer = 0;
 
@@ -21,8 +21,8 @@ public class AnimalSpawner : MonoBehaviour
 
         if (timer >= delay)
         {
-            //Debug.Log ("Moving");
-            Instantiate(animal);
+            int randomAnimal = Random.Range(0, animal.Length);
+            Instantiate(animal[randomAnimal]);
             timer = 0;
         }
     }

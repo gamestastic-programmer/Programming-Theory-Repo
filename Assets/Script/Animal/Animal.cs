@@ -4,12 +4,7 @@ using UnityEngine;
 
 public class Animal : MonoBehaviour
 {
-    [SerializeField] int speed = 2;
-    [SerializeField] GameObject Canvas;
-    int hitPoints = 1;
-
-    public int HitPoints { get => hitPoints; set => hitPoints = value; }
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -19,16 +14,16 @@ public class Animal : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
+
     }
 
-    private void Move()
+    public void Move(int speed)
     {
         this.transform.position += Vector3.right * Time.deltaTime * speed;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    public virtual int HitPoints()
     {
-        Debug.Log("This animal detected a collision");
+        return 0;
     }
 }

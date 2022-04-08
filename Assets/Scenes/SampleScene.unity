@@ -988,7 +988,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 846768dfbdc0b064bbf571f175b19056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animal: {fileID: 8005968193866912816, guid: f2b07f87dcd4cbe4d81b6243d495a88f, type: 3}
+  animal:
+  - {fileID: 6495069263318537571, guid: 89a891d38a073f64ca80dfb9944bd012, type: 3}
+  - {fileID: 8005968193866912816, guid: f2b07f87dcd4cbe4d81b6243d495a88f, type: 3}
+  - {fileID: 8098436363545503473, guid: 9216ba1a880c7ea4cadd298f8cac78c2, type: 3}
+  - {fileID: 1127253200169706872, guid: 27fe3778a380f8f468236acf2639617a, type: 3}
   delay: 3
 --- !u!4 &930075192
 Transform:
